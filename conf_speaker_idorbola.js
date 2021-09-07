@@ -20,7 +20,7 @@ export default function () {
   //replace the gwhost value with the hostname of the api gateway 
   const gwhost = 'sub.host.com'
 for (var id = 1; id <= 100; id++) {
-  const email = 'nn0${__VU}@custname.net';
+  const email = `nn0${__VU}@custname.net`;
   const params = { headers: { 'Authorization': 'Bearer faketokenforsimulateduser'+email } };
   let response = http.get('https://'+gwhost+'/conference/speaker/'+id+'/topics?subscription-key='+subkey, params);
   check(response, { 'status was 200': (r) => r.status == 200 });
