@@ -22,7 +22,7 @@ export default function () {
 for (var id = 100; id <= 300; id++) {
   const email = 'nn0${__VU}@custname.net';
   const params = { headers: { 'Authorization': 'Bearer faketokenforsimulateduser'+email } };
-  let response = http.get('https://'+gwhost+'/conference/session/${id}?subscription-key='+subkey, params);
+  let response = http.get('https://'+gwhost+'/conference/session/'+id+'?subscription-key='+subkey, params);
   check(response, { 'status was 200': (r) => r.status == 200 });
   // console.log(JSON.stringify(response));
 }
