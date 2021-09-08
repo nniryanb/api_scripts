@@ -20,7 +20,6 @@ export default function () {
  const subkey = 'changethis'
  //replace the gwhost value with the hostname of the api gateway 
  const gwhost = 'sub.host.com'
-
  const email = `nn0${__VU}@att.net`;	
  const params = { headers: { 'Authorization': 'Bearer faketokenforsimulateduser'+email } };
   let res = http.get('https://'+gwhost+'/httpbin/status/200:1,500:0.7,403:0.3,401?subscription-key='+subkey, params);
